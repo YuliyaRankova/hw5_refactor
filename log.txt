@@ -1,0 +1,1 @@
+[{"date":"2025-07-28T12:05:39.519Z","message":"Data was restored from file"},{"date":"2025-07-28T12:06:02.886Z","message":"User with id 5 was removed from DB"},{"date":"2025-07-28T12:06:19.954Z","message":"Data was saved to file"},{"date":"2025-07-28T12:06:19.955Z","message":"Server shutdown by Ctrl+C"}]

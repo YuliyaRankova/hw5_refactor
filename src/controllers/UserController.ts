@@ -30,6 +30,7 @@ export class UserController{
             myLogger.log('User already exists')
         }
     }
+
     removeUser(req:IncomingMessage, res:ServerResponse) {
         const url = new URL(req.url!, baseUrl);
         const param = url.searchParams.get('id');
@@ -60,12 +61,14 @@ export class UserController{
             }
         }
     }
+
     getAllUsers(req:IncomingMessage, res:ServerResponse){
         const result = this.userService.getAllUsers();
         res.writeHead(200, {'Content-Type': 'application/json'})
         res.end(JSON.stringify(result));
         myLogger.log(`All users responsed`);
     }
+
     getUserById(req:IncomingMessage, res:ServerResponse){
         const url = new URL( req.url!, baseUrl);
         const param = url.searchParams.get('id');
@@ -93,6 +96,7 @@ export class UserController{
             }
         }
     }
+
     async updateUser(req: IncomingMessage, res: ServerResponse) {
         const body = await parseBody(req) as User;
         try {

@@ -3,6 +3,8 @@ import {UserController} from "../controllers/UserController.ts";
 import {myLogger} from "../utils/logger.ts";
 import {baseUrl} from "../config/userServerConfig.ts";
 
+//http://localhost:3005/api/users/:id
+//http://localhost:3005/api/users?id=6&age=21
 export const userRouters=
     async (req:IncomingMessage, res:ServerResponse, controller:UserController) => {
     const {url, method} = req;
